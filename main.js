@@ -14,7 +14,7 @@ function add() {
 }
 
 function start() {
-    intervalId = setInterval(add,300);
+    intervalId = setInterval(add,1000);
 }
 
 function stop() {
