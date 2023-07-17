@@ -20,10 +20,6 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-#seconds, #tens {
-  font-size: 2em;
-}
-
 button {
   border-radius: 5px;
   -khtml-border-radius: 5px;

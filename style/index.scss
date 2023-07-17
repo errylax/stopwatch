@@ -38,10 +38,6 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-#seconds, #tens{
-  font-size:2em;
-}
-
 button{
 @include corners (5px);
 background:$base-color;
