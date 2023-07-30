@@ -1,15 +1,18 @@
 let intervalId;
 
 function add() {
-    let minutes = document.querySelector("#minutes").innerHTML;
     let seconds = document.querySelector("#seconds").innerHTML;
-    if (parseInt(seconds) === 59) {
-        minutes = (parseInt(minutes)+1).toString();
-        document.querySelector("#minutes").innerHTML = minutes;
-        document.querySelector("#seconds").innerHTML = "00";
-    } else {
+    let tens = document.querySelector("#tens").innerHTML;
+    let newSeconds,newTens;
+    if (parseInt(tens) === 59) {
         seconds = (parseInt(seconds)+1).toString();
-        document.querySelector("#seconds").innerHTML = seconds;
+        newSeconds = '0'+seconds;
+        document.querySelector("#seconds").innerHTML = (seconds<10) ? newSeconds : seconds ;
+        document.querySelector("#tens").innerHTML = "00";
+    } else {
+        tens = (parseInt(tens)+1).toString();
+        newTens = '0'+tens;
+        document.querySelector("#tens").innerHTML = (tens<10) ? newTens : tens ;
     }
 }
 
@@ -22,6 +25,6 @@ function stop() {
 }
 
 function reset() {
-    document.querySelector("#minutes").innerHTML = "00";
     document.querySelector("#seconds").innerHTML = "00";
+    document.querySelector("#tens").innerHTML = "00";
 }
